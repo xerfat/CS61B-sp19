@@ -75,7 +75,7 @@ public class NBody {
 
         /** a graphics technique to prevent flickering in the animation. */
         StdDraw.enableDoubleBuffering();
-        
+        StdAudio.play("./audio/2001.mid");
         for (double s = 0; s < T; s = s + dt) {
 
             for (int i = 0; i < b.length; i += 1) {
@@ -97,6 +97,7 @@ public class NBody {
 
             StdDraw.show();
             StdDraw.pause(1);
+
        }
 
        StdOut.printf("%d\n", b.length);
