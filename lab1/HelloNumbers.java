@@ -1,5 +1,5 @@
-package Lecture01;
-
+// package Lecture01;
+/** @authored xerfat */
 public class HelloNumbers {
     public static void main(String[] args){
         int x;

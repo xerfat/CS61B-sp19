@@ -7,10 +7,7 @@ public class TestCalcDistance {
     /**
      *  Tests calcDistance.
      */
-    public static void main(String[] args) {
-        checkCalcDistance();
-    }
-
+        
     /**
      *  Checks whether or not two Doubles are equal and prints the result.
      *
