@@ -1,3 +1,5 @@
+package Lecture03.Lab02.Intlist;
+
 import java.util.Formatter;
 
 /**
@@ -82,7 +84,15 @@ public class IntList {
 
     public static IntList dcatenate(IntList A, IntList B) {
         //TODO:  fill in method
-        return null;
+        /**
+         * @author xerfat
+         *  用指针ptr把A和B连起来 */
+        IntList ptr = A;
+        while (ptr.rest != null) {
+            ptr = ptr.rest;
+        }
+        ptr.rest = B;
+        return A;
     }
 
     /**
@@ -91,7 +101,17 @@ public class IntList {
      */
     public static IntList catenate(IntList A, IntList B) {
         //TODO:  fill in method
-        return null;
+        IntList AB = new IntList(A.first, null);
+        IntList ptr1 = A;
+        IntList ptr2 = AB;
+        //ptr1 = A.rest;
+        while (ptr1.rest != null) {
+            ptr1 = ptr1.rest;
+            ptr2.rest = new IntList(ptr1.first, null);
+            ptr2 = ptr2.rest;
+        }
+        ptr2.rest = B;
+        return AB;
     }
 
 
