@@ -1,5 +1,7 @@
 package Lecture07.Project1B;
-
+/** Project 1B code is below
+ * @author xerfat (at 2021.04.01)
+ */
 public class OffByN implements CharacterComparator {
 
     public int n;

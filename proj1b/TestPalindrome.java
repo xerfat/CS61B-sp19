@@ -1,7 +1,9 @@
 package Lecture07.Project1B;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
+/** Project 1B code is below
+ * @author xerfat (at 2021.04.01)
+ */
 public class TestPalindrome {
     // You must use this palindrome, and not instantiate
     // new Palindromes, or the autograder might be upset.

@@ -4,7 +4,9 @@ import Lecture040506.Project1A.AList;
 import Lecture040506.Project1A.ArrayDeque;
 
 import java.util.Arrays;
-
+/** Project 1B code is below
+ * @author xerfat (at 2021.04.01)
+ */
 /** This class outputs all palindromes in the words file in the current directory. */
 public class PalindromeFinder {
     public static void main(String[] args) {
@@ -18,7 +20,7 @@ public class PalindromeFinder {
         Deque<String> longest = new ArrayDeque<>();
         longest.addFirst("");
 
-        
+
         while (!in.isEmpty()) {
             String word = in.readString();
             for (int i = 0; i < 26; i += 1) {
