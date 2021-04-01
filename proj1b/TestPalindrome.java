@@ -1,4 +1,5 @@
-/*import org.junit.Test;
+package Lecture07.Project1B;
+import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TestPalindrome {
@@ -14,5 +15,28 @@ public class TestPalindrome {
             actual += d.removeFirst();
         }
         assertEquals("persiflage", actual);
+        // Deque class does not provide an equals method
+        // and thus it won’t work the way you expect.
     }
-}     Uncomment this class once you've created your Palindrome class. */
+
+    @Test
+    public void testIsPalindrome() {
+        assertFalse(palindrome.isPalindrome("panama"));
+        assertFalse(palindrome.isPalindrome("panamal"));
+        assertTrue(palindrome.isPalindrome("abcba"));
+        assertTrue(palindrome.isPalindrome("abccba"));
+        assertTrue(palindrome.isPalindrome(""));
+        assertTrue(palindrome.isPalindrome("q"));
+    }
+
+    @Test
+    public void testIsPalindromeOffByOne() {
+        CharacterComparator cc = new OffByOne();
+        assertTrue(palindrome.isPalindrome("q", cc));
+        assertTrue(palindrome.isPalindrome("", cc));
+        assertFalse(palindrome.isPalindrome("aqq", cc));
+        assertFalse(palindrome.isPalindrome("ekalf", cc));
+        assertTrue(palindrome.isPalindrome("bdfeca", cc));
+        assertTrue(palindrome.isPalindrome("bdeca", cc));
+    }
+}
